@@ -1,13 +1,17 @@
 const HttpError = require("./HttpError");
 const {
-  contactSchema,
   addContactsSchema,
   patchContactsFavoriteSchema,
+  contactSchema,
+  userSchema,
+  registerSchema,
 } = require("./schemas");
 
 module.exports = {
   HttpError,
-  contactSchema,
   addContactsSchema,
   patchContactsFavoriteSchema,
+  contactSchema,
+  userSchema,
+  registerSchema,
 };
