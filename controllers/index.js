@@ -9,6 +9,8 @@ const {
 
 const {
   userRegister,
+  userVerifyEmail,
+  userVerifyEmailRepetedly,
   userLogin,
   userCurrent,
   userLogout,
@@ -24,6 +26,8 @@ module.exports = {
   putContact,
   patchContactFavorite,
   userRegister,
+  userVerifyEmail,
+  userVerifyEmailRepetedly,
   userLogin,
   userCurrent,
   userLogout,
