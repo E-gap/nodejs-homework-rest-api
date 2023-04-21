@@ -47,6 +47,11 @@ const registerSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required(),
 });
 
+// схемы Joi для email пользователей
+const emailSchema = Joi.object({
+  email: Joi.string().pattern(emailRegexp).required(),
+});
+
 // схема mongoose для пользователей
 
 const userSchema = new Schema(
@@ -72,6 +77,14 @@ const userSchema = new Schema(
       default: "",
     },
     avatarURL: String,
+    verify: {
+      type: Boolean,
+      default: false,
+    },
+    verificationToken: {
+      type: String,
+      required: [true, "Verify token is required"],
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -81,5 +94,6 @@ module.exports = {
   patchContactsFavoriteSchema,
   contactSchema,
   userSchema,
+  emailSchema,
   registerSchema,
 };
